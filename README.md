@@ -5,20 +5,21 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+##READMEでマークダウンの練習
+###fruits
+-apple
+-orange
+###vegetarian
+-tomato
+-potato
+###sweets
+1.chocolate
+1.popcorn
 
-* System dependencies
+```
+背景あり
+```
 
-* Configuration
+ここは改行の練習です  
+ここが改行の練習です
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

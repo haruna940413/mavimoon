@@ -18,7 +18,6 @@ class User < ApplicationRecord
                              }
 
   validates :email, presence: true
-
   validates :postal_code, presence: true,
                        format: {
                          with: /\A\d{7}\z/,
