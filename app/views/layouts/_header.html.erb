@@ -1,8 +1,7 @@
-<header>
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
     <!--エンドユーザーがログインしている時 -->
     <!--ロゴ-->
-    <div class="header-top">
+    <div class="header-logo">
       <%= link_to user_path(current_user.id) do %>
        <%= image_tag('logo.png', :size =>'200x50') %>
       <% end %>
@@ -14,10 +13,10 @@
           <%= link_to "about", homes_about_path %>
         </li>
         <li>
-          <%= link_to "items", user_pets_path %>
+          <%= link_to "items", user_items_path %>
         </li>  
       </ul>
-      <ul class="list-rigth">
+      <ul class="list-right">
         <li>
           <%= link_to "", destroy_user_session_path , method: :delete, "data-confirm" => "ログアウトしますか？", class: "far fa-user" %>
         </li>
@@ -32,13 +31,13 @@
   <% else %>
     <!--ログインしていない時-->
     <!--ロゴ-->
-    <div class="header-top">
+    <div class="header-logo">
       <%= link_to "/" do %>
        <%= image_tag('logo.png', :size =>'200x50') %>
       <% end %>
     </div>
     <!--リスト-->
-        <nav class="list">
+    <nav class="list">
       <ul class="list-left">
         <li>
           <%= link_to "about", homes_about_path %>
@@ -47,7 +46,7 @@
           <%= link_to "items", user_items_path %>
         </li>  
       </ul>
-      <ul class="list-rigth">
+      <ul class="list-right">
         <li>
           <%= link_to "", new_user_session_path , class: "far fa-user" %>
         </li>
@@ -60,21 +59,3 @@
       </ul>
     </nav>
   <% end %>
-
-
-
-<script>
-  $(function() {
-    $('.hamburger').click(function() {
-        $(this).toggleClass('active');
-
-        if ($(this).hasClass('active')) {
-            $('.globalMenuSp').addClass('active');
-        } else {
-            $('.globalMenuSp').removeClass('active');
-        }
-    });
-});
-</script>
-
-</header>

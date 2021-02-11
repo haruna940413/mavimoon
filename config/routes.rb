@@ -11,15 +11,21 @@ Rails.application.routes.draw do
   }
 
   scope module: :user do
+    # ホーム
     root to: 'homes#top'
     get 'homes/about' => "homes#about"
+    # ユーザー
     resources :users, only: [:show, :edit, :update]
-     # 検索機能
+     # 検索
      get 'search' => 'search#search'
   end
 
   namespace :user do
+    # 配送先住所
     resources :shippings, only: [:index, :create, :edit, :update, :destroy]
+    #お気に入り
+    resources :favorites, only: [:index, :create, :destroy]
+    #アイテム
     resources :items, only: [:index, :show]
     get 'orders/thanks'
     resources :orders do
@@ -30,7 +36,6 @@ Rails.application.routes.draw do
     resources :genres, only: [:show]
     delete 'cart_items/all_destroy'
     resources :cart_items, only: [:index, :create, :update, :destroy]
-    resources :favorites, only: [:create, :destroy]
     
   end
  # =======================================ユーザー側(終)=================================================

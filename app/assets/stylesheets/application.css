@@ -13,3 +13,91 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fbfaf5;
+}
+
+* a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+* a:hover {
+  text-decoration: none;
+}
+
+
+* ul {
+  list-style: none;
+}
+
+.text-danger {
+  color: red;
+}
+
+.container {
+  margin: 0 auto;
+}
+body {
+  display: grid;
+  grid-template :
+    "header header header" 80px
+    "nav main ....." 1fr
+    "footer footer footer" 150px
+    /300px 
+  ;
+}
+
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  min-height: 200px;
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+/*==ヘッダー=============================================================================================*/
+header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+}
+
+.list {
+  line-height: 80px;
+  width: 100%;
+  display: flex;
+}
+.list-left {
+  display: flex;
+  flex-grow: 8;
+}
+.list-left > li {
+  width: 100px;
+  margin-left: 15px;
+}
+.list-right {
+  display: flex;
+  flex-grow: 2;
+}
+.list-right > li {
+  width: 70px;
+  margin-left: 15px;
+}
+/*==ヘッダー(終)=========================================================================================*/
+/*==フッター=============================================================================================*/
+footer {
+  background-color: #d3d3d3;
+}
+/*==フッター(終)=========================================================================================*/

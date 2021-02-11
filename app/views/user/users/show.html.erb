@@ -1,2 +1,9 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<!--マイページ・ユーザー詳細-->
+  <div class="user-show-btn">
+    <%= link_to "注文履歴", user_orders_path, class: "fas fa-history" %>
+    <%= link_to "登録内容変更", edit_user_path(current_user.id), class: "fas fa-user" %>
+    <%= link_to "お気に入り一覧", user_favorites_path(current_user), class: "far fa-heart" %>
+    <%= link_to "ログアウト", destroy_user_session_path , method: :delete, "data-confirm" => "ログアウトしますか？", class: "fas fa-sign-out-alt" %>
+  </div>
+      <!--ページング-->
+      <!--<div class="text-center user-show-article-index-pagination"><%#= paginate @articles %></div>-->
