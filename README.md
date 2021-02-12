@@ -5,16 +5,16 @@ application up and running.
 
 Things you may want to cover:
 
-##READMEでマークダウンの練習
-###fruits
--apple
--orange
-###vegetarian
--tomato
--potato
-###sweets
-1.chocolate
-1.popcorn
+## READMEでマークダウンの練習
+### fruits
+- apple
+- orange
+### vegetarian
+- tomato
+- potato
+### sweets
+1. chocolate
+1. popcorn
 
 ```
 背景あり
