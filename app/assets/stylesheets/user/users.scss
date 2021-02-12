@@ -1,6 +1,10 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+main {
+  margin: 0 ;
+}
+
 .user-show-btn > a {
   display: inline-block;
   width: 200px;
@@ -8,5 +12,10 @@
   border: solid 1px #696969;
   margin-right: 30px;
   line-height: 100px;
-  padding: 0 auto;
+  text-align: center;
+}
+.user-show-btn > a:hover {
+  background-color: #dcdcdc;
+  opacity: 0.6;
+  
 }

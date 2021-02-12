@@ -13,13 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #fbfaf5;
-}
+/*==全体=============================================================================================*/
 
 * a {
   text-decoration: none;
@@ -27,10 +21,10 @@
   font-size: 20px;
 }
 
-* a:hover {
+* a :hover {
   text-decoration: none;
+  color: ;
 }
-
 
 * ul {
   list-style: none;
@@ -39,33 +33,51 @@
 .text-danger {
   color: red;
 }
-
 .container {
   margin: 0 auto;
 }
-body {
-  display: grid;
-  grid-template :
-    "header header header" 80px
-    "nav main ....." 1fr
-    "footer footer footer" 150px
-    /300px 
-  ;
-}
 
+body {
+  font-size: 1rem;
+  width: auto;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+      "... ...... ...... ...... ...... ...... ..."
+      "... header header header header header ..." 150px
+      "... ...... ...... ...... ...... ...... ..."
+      "... left   ...... center ...... ......  ..." 1fr
+      "... ...... ...... ...... ...... ...... ..."
+      "... footer footer footer footer footer ..." 300px
+      "... ...... ...... ...... ...... ...... ..."
+      / auto 300px 100px 1fr auto auto auto;
+}
 header {
   grid-area: header;
 }
 nav {
-  grid-area: nav;
+  grid-area: left;
 }
 main {
-  min-height: 200px;
-  grid-area: main;
+  grid-area: center;
 }
 footer {
   grid-area: footer;
 }
+
+@media screen and (max-width: 1000px) {
+  body {
+    grid-template:
+      "header" 150px
+      "center" 1fr
+      "left  "
+      "right "
+      "footer" 300px;
+  }
+}
+
+/*=======================================================================================================*/
 
 /*==ヘッダー=============================================================================================*/
 header {
